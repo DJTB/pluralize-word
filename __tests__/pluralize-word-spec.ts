@@ -19,6 +19,19 @@ describe('pluralizeWord', () => {
     it('should pluralize a word with a count of 2', () => {
       expect(pluralizeWord('dog', 2)).toBe('2 dogs');
     });
+    it('should not pluralize a schema without a count', () => {
+      // @ts-ignore
+      expect(pluralizeWord(['dog', 'dogs'])).toBe('dog');
+    });
+    it('should pluralize a schema with a count of zero', () => {
+      expect(pluralizeWord(['person', 'people'], 0)).toBe('0 people');
+    });
+    it('should not pluralize a schema with a count of 1', () => {
+      expect(pluralizeWord(['person', 'people'], 1)).toBe('1 person');
+    });
+    it('should pluralize a schema with a count of 2', () => {
+      expect(pluralizeWord(['person', 'people'], 2)).toBe('2 people');
+    });
   });
 
   describe('options', () => {
