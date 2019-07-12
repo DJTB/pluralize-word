@@ -4,7 +4,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/DJTB/pluralize-word/badge.svg?branch=master)](https://coveralls.io/github/DJTB/pluralize-word?branch=master)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
-Super simple pluralizing, with optional schema for manually handling irregular words
+Super simple pluralizing, with optional schema for manually handling irregular words.  
+Basically the same as writing `${amount} ${amount !== 1 ? 'words' : 'word'}` just cleaner when used a lot.
 
 ```ts
 import pluralizeWord from 'pluralize-word';
