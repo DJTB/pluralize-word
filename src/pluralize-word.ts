@@ -6,29 +6,18 @@ const defaultOptions = {
   excludeCount: false,
 };
 
-/**
- * @param {string[]|string} subject string or schema array of ['singular', 'plural']
- * @param {number} [amount] amount of subjects
- * @param {IOptions} [options]
- * @param {boolean} [options.excludeCount] only return pluralized subject
- * @example
- * pluralizeWord('dog', 2)
- * // => 2 dogs
- * pluralizeWord(['person', 'people'], 2)
- * // => 2 people
- * pluralizeWord(['person', 'people'], 2, { excludeCount: true })
- * // => people
- */
-export function pluralizeWord(subject: string, amount: number, options?: IOptions): string {
-  const word = typeof subject === 'string' ? subject : '';
-
+export function pluralizeWord(
+  subject: string | string[],
+  amount: number,
+  options?: IOptions
+): string {
   if (!Number.isFinite(amount)) {
-    return word;
+    return (Array.isArray(subject) ? subject[0] : subject) || '';
   }
 
   const config = { ...defaultOptions, ...options };
   const count = config.excludeCount ? '' : `${amount} `;
-  const schema = Array.isArray(word) ? word : [word, `${word}s`];
+  const schema = Array.isArray(subject) ? subject : [subject, `${subject}s`];
 
   return `${count}${schema[Math.abs(amount) === 1 ? 0 : 1]}`;
 }
