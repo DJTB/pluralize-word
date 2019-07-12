@@ -23,6 +23,12 @@ Type: `string|string[]`
 
 Subject in the singular, or a schema array of ['singular', 'plural']
 
+#### amount
+
+Type: `number`
+
+The amount of subjects
+
 #### options
 
 Type: `object`
