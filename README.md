@@ -1,5 +1,6 @@
 # Pluralize Word
 
+[![NPM Version](http://img.shields.io/npm/v/pluralize-word.svg?style=flat)](https://npmjs.org/package/pluralize-word)
 [![Build Status](https://travis-ci.org/DJTB/pluralize-word.svg?branch=master)](https://travis-ci.org/DJTB/pluralize-word.svg?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/DJTB/pluralize-word/badge.svg?branch=master)](https://coveralls.io/github/DJTB/pluralize-word?branch=master)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
