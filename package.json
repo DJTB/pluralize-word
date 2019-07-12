@@ -1,16 +1,17 @@
 {
   "name": "pluralize-word",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "pluralize-word",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/DJTB/pluralize-word",
   "author": {
-    "name": "",
-    "email": "",
-    "url": ""
+    "name": "Duncan Bay",
+    "email": "duncan.bay@gmail.com",
+    "url": "https://github.com/DJTB"
   },
   "keywords": [
-    ""
+    "pluralize",
+    "typescript"
   ],
   "files": [
     "lib"
